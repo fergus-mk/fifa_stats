@@ -11,5 +11,5 @@ The project relies on packages contained in the
 stats_env.yml file. Users should use the command line 
 command to initiate the environment:
 
-`conda env create -f environment.yml`
+`conda env create -f stats_env.yml`
 
