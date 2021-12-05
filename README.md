@@ -15,5 +15,6 @@ command to initiate the environment:
 
 `conda env create -f stats_env.yml`
 
-NOTE: The project will be adapted to take command line input (work in 
+NOTE: The project will be adapted to take command line input i.e.
+for selecting fifa edition and desired stat (work in 
 progress)
