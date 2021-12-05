@@ -2,7 +2,9 @@
 
 ---
 This project generates insights based on stats from 
-the Fifa series of games.
+the Fifa series of games. It shows the players with 
+the highest rating of a selected stat from a given
+edition of the Fifa game
 
 ## Use
 
@@ -13,4 +15,5 @@ command to initiate the environment:
 
 `conda env create -f stats_env.yml`
 
-# test added headline
+NOTE: The project will be adapted to take command line input (work in 
+progress)

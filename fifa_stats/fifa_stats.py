@@ -6,7 +6,9 @@ from constants import PATH
 
 if __name__ == "__main__":
 
-    fifa_21_stats = helpers.fifa_file_opener(PATH, "21")  # Opening df of fifa 21 players
+    fifa_21_stats = helpers.fifa_file_opener(
+        PATH, "21"
+    )  # Opening df of fifa 21 players
 
     top_defenders_21 = helpers.top_players_in_stat(
         fifa_21_stats, 5, "defending"
