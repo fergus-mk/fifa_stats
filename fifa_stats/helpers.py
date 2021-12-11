@@ -23,12 +23,7 @@ def parse_arg_adder(arg, type, help_string, arg_parser):
     The argument is added to the parser in the correct type with a help text description
 
     """
-    return arg_parser.add_argument(
-        arg,
-        metavar=arg,
-        type=type,
-        help=help_string,
-    )
+    return arg_parser.add_argument(arg, metavar=arg, type=type, help=help_string,)
 
 
 def fifa_file_opener(path, game_year):

@@ -15,6 +15,10 @@ command to initiate the environment:
 
 `conda env create -f stats_env.yml`
 
-NOTE: The project will be adapted to take command line input i.e.
-for selecting fifa edition and desired stat (work in 
-progress)
+To use the project enter the required year, stat and number of players
+when calling the file in a python terminal e.g.,
+
+`python fifa_stats.py 21 defending 3`
+
+Would return a bar chart showing  the defending stat of the 3 best defenders 
+in Fifa 21
