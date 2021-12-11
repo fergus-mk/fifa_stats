@@ -32,16 +32,15 @@ if __name__ == "__main__":
     stat = args.stat  # The desired stat
     no_of_players = args.no_of_players  # The number of players to display
 
-    fifa_stats = helpers.fifa_file_opener(
-        PATH, year
-    )  # Opening df of fifa players for selected year
+    fifa_21_stats = helpers.fifa_file_opener(
+        PATH, "21"
+    )  # Opening df of fifa 21 players
 
-    top_players = helpers.top_players_in_stat(
-        fifa_stats, no_of_players, stat
-    )  # Selecting no_of_players top players for selected stat
+    top_defenders_21 = helpers.top_players_in_stat(
+        fifa_21_stats, 5, "defending"
+    )  # Calculating top 5 defenders in Fifa 21
 
-    top_players_barplot = helpers.player_stat_barplot_creater(
-        top_players, stat, year
-    )  # Creating a barplot showing the top players for selected stat
-
-    print(top_players_barplot)
+    top_defenders_21_barplot = helpers.player_stat_barplot_creater(
+        top_defenders_21, "defending", "21"
+    )  # Creating a barplot showing the top 5 defenders
+    print(top_defenders_21_barplot)

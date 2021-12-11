@@ -82,9 +82,9 @@ def player_stat_barplot_creater(players, stat, fifa_year):
         A barplot showing stat for the selected players
     -------
     """
-    sns.barplot(x=players["short_name"], y=players[stat], data=players).set_title(
-        f"Fifa {fifa_year} {stat} top players"
-    )
+    sns.barplot(
+        x=players["short_name"], y=players["defending"], data=players
+    ).set_title(f"Fifa {fifa_year} {stat} top players")
     plt.xlabel("name")
     plt.show()
     return None
