@@ -1,1 +1,1 @@
-PATH = "C:/Users/fergu/PycharmProjects/player_data/"
+PATH = 'C:/Users/fergu/PycharmProjects/player_data/'

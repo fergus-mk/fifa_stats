@@ -3,6 +3,34 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 
+def parse_arg_adder(arg, type, help_string, arg_parser):
+    """
+    Adds arguments and help description to parser
+
+    Parameters
+    ----------
+    arg
+        The argument to be added to the parser (string)
+    type
+        The data type
+    help_string
+        The text for the help string
+    arg_parser
+        The required argument parser
+
+    Returns
+    -------
+    The argument is added to the parser in the correct type with a help text description
+
+    """
+    return arg_parser.add_argument(
+        arg,
+        metavar=arg,
+        type=type,
+        help=help_string,
+    )
+
+
 def fifa_file_opener(path, game_year):
     """
     Opens fifa df for the given year
@@ -59,9 +87,9 @@ def player_stat_barplot_creater(players, stat, fifa_year):
         A barplot showing stat for the selected players
     -------
     """
-    sns.barplot(
-        x=players["short_name"], y=players["defending"], data=players
-    ).set_title(f"Fifa {fifa_year} {stat} top players")
+    sns.barplot(x=players["short_name"], y=players[stat], data=players).set_title(
+        f"Fifa {fifa_year} {stat} top players"
+    )
     plt.xlabel("name")
     plt.show()
     return None
