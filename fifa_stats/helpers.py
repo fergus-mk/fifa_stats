@@ -41,7 +41,7 @@ def fifa_file_opener(path, game_year):
     -------
         pd dataframe of fifa version
     """
-    return pd.read_csv(f"{path}players_{str(game_year)}.csv")
+    return pd.read_csv(f"{path}/players_{str(game_year)}.csv")
 
 
 def top_players_in_stat(fifa_game, no_of_players, stat):
