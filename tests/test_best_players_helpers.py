@@ -1,6 +1,6 @@
 import pytest
-import fifa_stats.helpers as helpers
-import fifa_stats.constants as constants
+import best_players.helpers as helpers
+import best_players.constants as constants
 
 
 fifa_20_stats = helpers.fifa_file_opener(
@@ -17,10 +17,3 @@ def test_top_players_in_stat():
     third_best_player = best_passers_fifa_20["short_name"].iloc[2]
     expected = "T. Kroos"
     assert third_best_player == expected
-
-
-# @pytest.mark.helper  # Does it make any sense to try and test the seaborn output?
-# def test_player_stat_barplot_creater():
-#     """
-#     Tests the function helpers.player_stat_barplot_creater
-#     """

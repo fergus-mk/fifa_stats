@@ -32,9 +32,7 @@ if __name__ == "__main__":
     stat = args.stat  # The desired stat
     no_of_players = args.no_of_players  # The number of players to display
 
-    player_stats = helpers.fifa_file_opener(
-        PATH, year
-    )  # Opening df of fifa players
+    player_stats = helpers.fifa_file_opener(PATH, year)  # Opening df of fifa players
 
     top_players = helpers.top_players_in_stat(
         player_stats, no_of_players, stat
