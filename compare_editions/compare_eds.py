@@ -14,5 +14,5 @@ def comparer(player, stat, year1, year2):
     print(compared)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     app()
