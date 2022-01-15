@@ -80,7 +80,6 @@ def player_stat_barplot_creater(players, stat, fifa_year):
 
     Returns
         A barplot showing stat for the selected players
-    -------
     """
     sns.set_style("darkgrid")
     sns.barplot(x=players["short_name"], y=stat, data=players).set_title(

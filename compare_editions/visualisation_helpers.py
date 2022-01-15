@@ -8,19 +8,26 @@ def comparison_players_df_maker(stat_value1, stat_value2, game_year1, game_year2
     Combines stat values with associated game year in a df
     """
     data = [[stat_value1, game_year1], [stat_value2, game_year2]]
-    df = pd.DataFrame(data, index=[0, 1], columns=['stat', 'game_year'])
+    df = pd.DataFrame(data, index=[0, 1], columns=["stat", "game_year"])
     return df
 
-def create_comparison_barplot(player_name, stat, stat_value1, stat_value2, game_year1, game_year2):
+
+def create_comparison_barplot(
+    player_name, stat, stat_value1, stat_value2, game_year1, game_year2
+):
     """
     Creates a barplot showing a comparison of two players in a given stat
     """
-    plot_data = comparison_players_df_maker(stat_value1, stat_value2, game_year1, game_year2)
-    sns.set_style('darkgrid')
-    sns.barplot(x=plot_data['game_year'], y=plot_data['stat'], data=plot_data).set_title(
-        f'{player_name} {stat} comparison Fifa {game_year1} and Fifa {game_year2}'
+    plot_data = comparison_players_df_maker(
+        stat_value1, stat_value2, game_year1, game_year2
     )
-    plt.xlabel('game year')
+    sns.set_style("darkgrid")
+    sns.barplot(
+        x=plot_data["game_year"], y=plot_data["stat"], data=plot_data
+    ).set_title(
+        f"{player_name} {stat} comparison Fifa {game_year1} and Fifa {game_year2}"
+    )
+    plt.xlabel("game year")
     plt.ylabel(stat)
     plt.show()
     return None
