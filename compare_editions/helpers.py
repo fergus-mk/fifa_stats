@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-def fifa_file_opener(PATH, game_year):
+def fifa_file_opener(path, game_year):
     """
     Opens fifa df for the given year
 
@@ -16,7 +16,7 @@ def fifa_file_opener(PATH, game_year):
     -------
         pd dataframe of fifa version
     """
-    return pd.read_csv(f"{PATH}/players_{str(game_year)}.csv")
+    return pd.read_csv(f"{path}/players_{str(game_year)}.csv")  # Chnage to Fifa Players Path
 
 
 def stat_selector(player, stat, in_path, year):
@@ -43,3 +43,12 @@ def stat_comparer(player, stat, stat_value1, stat_value2, year1, year2):
         return f'{player} has got worse at {stat} by {str(diff*-1)} points between fifa{year2} and fifa{year1}'
     else:
         return f'{stat} is not in both game verisons'
+
+
+def top_players_stat(fifa_df, stat, no_of_players):
+    """
+    Add doc string
+    """
+    n_players = int(no_of_players)
+    top_players = fifa_df.sort_values(by=[stat], ascending=False).head(n_players)
+    return top_players
