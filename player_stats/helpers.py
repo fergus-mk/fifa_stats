@@ -62,7 +62,7 @@ def stat_comparer(player, stat, stat_value1, stat_value2, year1, year2):
     year1
         The more recent game year (int)
     year2
-        The more recent game year (int)
+        The less recent game year (int)
 
     Returns
     -------

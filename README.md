@@ -18,7 +18,7 @@ call functions directly from  player_stats.py
 directly from the command line. Currently there are 
 two options:
 
-`python .\compare_eds.py comparer 'M. Salah', 
+`python .\player_stats.py comparer 'M. Salah', 
 'overall',  21, 19`
 
 Demonstrates use of the 'comparer' function which 
@@ -28,7 +28,7 @@ this via a print statement and the creation of a
 barplot. In this example the player 'M. Salah' is
 compared between Fifa 21 and Fifa 19.
 
-`python .\compare_eds.py best 'defending', 18, 3`
+`python .\Player_stats.py best 'defending', 18, 3`
 
 Demonstrates use of the 'best' function which 
 produces a barplot showing the best players at 

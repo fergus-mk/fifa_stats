@@ -1,7 +1,7 @@
 import pytest
-from compare_editions.constants import PLAYER_DATA_PATH
-import compare_editions.helpers as helpers
-import compare_editions.constants as constants
+from player_stats.constants import PLAYER_DATA_PATH
+import player_stats.helpers as helpers
+import player_stats.constants as constants
 
 
 fifa_20_stats = helpers.fifa_file_opener(
